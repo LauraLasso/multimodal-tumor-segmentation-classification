@@ -15,6 +15,50 @@ Bienvenido al repositorio de segmentación y análisis de imágenes médicas cer
 - [Evaluación y Visualización](#evaluación-y-visualización)
 - [Referencias y Créditos](#referencias-y-créditos)
 - [Contacto](#contacto)
+
+---
+
+## Estructura del Proyecto
+
+proyecto_segmentacion/
+├── data/
+│ ├── BCBM-RadioGenomics_Images_Masks_Dec2024/
+│ ├── brats20-dataset-training-validation/
+│ ├── split_regression/
+│ ├── train_data.csv
+│ └── df_with_voxel_stats_and_latent.csv
+├── models/
+│ ├── LViT/
+│ ├── SegResNet/
+│ ├── ae_3d/
+│ ├── brats20logs/
+│ ├── monai_models/
+│ │ ├── SegResNet_Monai/
+│ │ └── unetr_Monai/
+│ ├── sam2/
+│ │ ├── core/
+│ │ ├── medsam2/
+│ │ ├── meta/
+│ │ └── ultralytics/
+│ ├── unet_3d/
+│ └── unimodal_nets/
+├── regression_analysis/
+│ ├── evaluation/
+│ ├── feature_processing/
+│ │ └── ae_3d/
+│ ├── hyperparameter_optimization/
+│ └── init.py
+├── visualizations/
+├── notebooks/
+│ ├── regression_analysis/
+│ ├── evaluation/
+│ ├── feature_processing/
+│ └── hyperparameter_optimization/
+├── .gitignore
+├── .gitattributes
+└── README.md
+
+
 ---
 
 ## Requisitos
@@ -41,76 +85,85 @@ pip install -r requirements.txt
 
 ## Descripción de Carpetas y Módulos
 
-### `common/`
-- **config.py**: Configuración global y funciones de semilla.
-- **dataset.py**: Dataset BraTS y utilidades de carga de datos.
+### `data/`
+- Datos brutos, procesados y archivos de entrenamiento y validación, incluyendo datasets de BraTS y BCBM-RadioGenomics.
 
-### `models/monai_segmentation/`
-- **segresnet/** y **unetr/**: Implementaciones, entrenamiento, inferencia y visualización de SegResNet y UNETR (MONAI).
-
-### `models/unet_3d/`
-- Implementación modular de U-Net 3D para segmentación volumétrica.
-
-### `models/resnet34_unet/` y `resnet101_unet/`
-- Modelos U-Net con encoder ResNet34 y ResNet101, y scripts de entrenamiento.
-
-### `models/sam2/`
-- **ultralytics/**: Uso y predicción con SAM2 de Ultralytics.
-- **meta/**: Dataset, entrenamiento y utilidades para SAM2 de Meta.
-- **medsam2/**: Entrenamiento, pérdidas, validación y análisis para MedSAM2.
+### `models/`
+- **LViT/**: Implementación y utilidades para redes multimodales LViT.
+- **SegResNet/**: Segmentación con arquitectura SegResNet.
+- **ae_3d/**: Autoencoder 3D para extracción de características latentes.
+- **monai_models/**: Modelos de segmentación con MONAI, incluyendo subcarpetas para SegResNet y UNETR.
+- **sam2/**: Arquitectura SAM2 y variantes:
+  - **core/**: Código base y utilidades compartidas de SAM2.
+  - **medsam2/**: Entrenamiento, pérdidas, validación y análisis para MedSAM2.
+  - **meta/**: Dataset, entrenamiento y utilidades para la variante Meta de SAM2.
+  - **ultralytics/**: Uso y predicción con la variante Ultralytics de SAM2.
+- **unet_3d/**: Implementación modular de U-Net 3D para segmentación volumétrica.
+- **unimodal_nets/**: Modelos unimodales para experimentos comparativos.
 
 ### `regression_analysis/`
-- **hyperparameter_optimization/**: Búsqueda de hiperparámetros, configuraciones y utilidades.
 - **evaluation/**: Métricas, evaluación y visualización de resultados de regresión.
-- **feature_processing/3d_ae/**: Limpieza de características latentes con autoencoders.
+- **feature_processing/ae_3d/**: Limpieza de características latentes con autoencoders.
+- **hyperparameter_optimization/**: Búsqueda de hiperparámetros, configuraciones y utilidades.
 
 ### `visualizations/`
-- Visualizaciones generales, análisis de datasets, valores faltantes, 3D y comparativas.
+- Scripts y utilidades para visualización de resultados, análisis de datasets, valores faltantes y comparativas.
 
 ### `notebooks/`
-- Notebooks organizados por flujo de trabajo: exploración de datos, entrenamiento, análisis y visualización de resultados.
+- Notebooks organizados por funcionalidad: exploración de datos, entrenamiento, análisis de regresión, evaluación y visualización.
 
 ---
 
 ## Uso Rápido
 
-### 1. Configuración de entorno
+### Ejemplo de uso rápido: entrenamiento y predicción con 3D U-Net
 
-Asegúrate de tener los datos en la ruta indicada en `common/config.py`. Modifica las rutas si es necesario.
+#### 1. Entrenamiento de 3D U-Net
 
-### 2. Entrenamiento de un modelo (ejemplo SegResNet)
+from models.unet_3d.model import build_3dunet
+from models.unet_3d.train import train_model
+from models.unet_3d.data_generator import BraTSDataGenerator
 
-from common.config import GlobalConfig, seed_everything
-from common.dataset import BratsDataset
-from models.monai_segmentation.segresnet.model import get_segresnet_model
-from models.monai_segmentation.segresnet.train import train_segresnet
+Inicializa el generador de datos
+train_generator = BraTSDataGenerator(train_files, batch_size=2)
+val_generator = BraTSDataGenerator(val_files, batch_size=2)
 
-seed_everything(GlobalConfig.seed)
+Construye el modelo
+model = build_3dunet(input_shape=(128, 128, 96, 4))
 
-Carga de datos y DataLoader aquí...
-model = get_segresnet_model(device="cuda")
-train_segresnet(model, train_loader, val_loader, device="cuda", max_epochs=300)
-
-
-### 3. Inferencia
-
-from models.monai_segmentation.segresnet.inference import run_inference
-
-run_inference(model, val_loader, output_dir="./outputs", device="cuda")
+Entrena el modelo
+history = train_model(
+model,
+train_generator,
+val_generator,
+epochs=100,
+checkpoint_path="unet3d_best_model.pth"
+)
 
 
-### 4. Visualización
+#### 2. Inferencia con 3D U-Net
 
-from models.monai_segmentation.segresnet.visualization import visualizar_pred_vs_gt
+from models.unet_3d.inference import predict_volume
 
-visualizar_pred_vs_gt(paciente_id, input_image, gt_dir, slice_index=60)
+Carga el modelo entrenado
+model.load_state_dict(torch.load("unet3d_best_model.pth"))
+model.eval()
 
+Realiza la predicción sobre un volumen
+pred_mask = predict_volume(model, input_volume)
+
+
+#### 3. Visualización de resultados
+
+from models.unet_3d.visualization import plot_segmentation_results
+
+plot_segmentation_results(input_volume, ground_truth_mask, pred_mask, slice_index=64)
 
 ---
 
 ## Entrenamiento de Modelos
 
-- Todos los scripts de entrenamiento están en la carpeta de cada modelo.
+- Todos los scripts de entrenamiento y validación están en la carpeta de cada modelo.
 - Ajusta hiperparámetros y rutas en los archivos de configuración o directamente en los scripts.
 - Usa los notebooks para pruebas rápidas y análisis exploratorio.
 
@@ -131,4 +184,3 @@ visualizar_pred_vs_gt(paciente_id, input_image, gt_dir, slice_index=60)
 - [Ultralytics SAM2](https://github.com/ultralytics/ultralytics)
 - [Meta SAM2](https://github.com/facebookresearch/segment-anything)
 - [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
-
