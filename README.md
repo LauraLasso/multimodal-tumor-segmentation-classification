@@ -20,43 +20,44 @@ Bienvenido al repositorio de segmentación y análisis de imágenes médicas cer
 
 ## Estructura del Proyecto
 
-proyecto_segmentacion/
-├── data/
-│ ├── BCBM-RadioGenomics_Images_Masks_Dec2024/
-│ ├── brats20-dataset-training-validation/
-│ ├── split_regression/
-│ ├── train_data.csv
-│ └── df_with_voxel_stats_and_latent.csv
-├── models/
-│ ├── LViT/
-│ ├── SegResNet/
-│ ├── ae_3d/
-│ ├── brats20logs/
-│ ├── monai_models/
-│ │ ├── SegResNet_Monai/
-│ │ └── unetr_Monai/
-│ ├── sam2/
-│ │ ├── core/
-│ │ ├── medsam2/
-│ │ ├── meta/
-│ │ └── ultralytics/
-│ ├── unet_3d/
-│ └── unimodal_nets/
-├── regression_analysis/
-│ ├── evaluation/
-│ ├── feature_processing/
-│ │ └── ae_3d/
-│ ├── hyperparameter_optimization/
-│ └── init.py
-├── visualizations/
-├── notebooks/
-│ ├── regression_analysis/
-│ ├── evaluation/
-│ ├── feature_processing/
-│ └── hyperparameter_optimization/
-├── .gitignore
-├── .gitattributes
-└── README.md
+- **multimodal-tumor-segmentation-classification/**
+    - **data/**
+        - BCBM-RadioGenomics_Images_Masks_Dec2024/
+        - brats20-dataset-training-validation/
+        - split_regression/
+        - train_data.csv
+        - df_with_voxel_stats_and_latent.csv
+    - **models/**
+        - LViT/
+        - SegResNet/
+        - ae_3d/
+        - brats20logs/
+        - monai_models/
+            - SegResNet_Monai/
+            - unetr_Monai/
+        - sam2/
+            - core/
+            - medsam2/
+            - meta/
+            - ultralytics/
+        - unet_3d/
+        - unimodal_nets/
+    - **regression_analysis/**
+        - evaluation/
+        - feature_processing/
+            - ae_3d/
+        - hyperparameter_optimization/
+        - __init__.py
+    - **visualizations/**
+    - **notebooks/**
+        - regression_analysis/
+        - evaluation/
+        - feature_processing/
+        - hyperparameter_optimization/
+    - .gitignore
+    - .gitattributes
+    - README.md
+
 
 
 ---
@@ -116,48 +117,123 @@ pip install -r requirements.txt
 
 ## Uso Rápido
 
-### Ejemplo de uso rápido: entrenamiento y predicción con 3D U-Net
+### Entrenamiento y Evaluación con 3D U-Net
 
-#### 1. Entrenamiento de 3D U-Net
+Esta sección demuestra el flujo completo de trabajo con la arquitectura 3D U-Net, desde el entrenamiento hasta la visualización de resultados.
+
+#### 1. Entrenamiento del Modelo
+
+Configuración e inicialización del modelo 3D U-Net para segmentación volumétrica de tumores cerebrales:
 
 from models.unet_3d.model import build_3dunet
 from models.unet_3d.train import train_model
 from models.unet_3d.data_generator import BraTSDataGenerator
 
-Inicializa el generador de datos
-train_generator = BraTSDataGenerator(train_files, batch_size=2)
-val_generator = BraTSDataGenerator(val_files, batch_size=2)
+Configuración de generadores de datos
+train_generator = BraTSDataGenerator(
+train_files,
+batch_size=2,
+augmentation=True
+)
+val_generator = BraTSDataGenerator(
+val_files,
+batch_size=2,
+augmentation=False
+)
 
-Construye el modelo
-model = build_3dunet(input_shape=(128, 128, 96, 4))
+Construcción de la arquitectura del modelo
+model = build_3dunet(
+input_shape=(128, 128, 96, 4), # (H, W, D, Canales)
+num_classes=3,
+dropout_rate=0.2
+)
 
-Entrena el modelo
-history = train_model(
-model,
-train_generator,
-val_generator,
+Proceso de entrenamiento
+training_history = train_model(
+model=model,
+train_generator=train_generator,
+val_generator=val_generator,
 epochs=100,
-checkpoint_path="unet3d_best_model.pth"
+learning_rate=1e-4,
+checkpoint_path="checkpoints/unet3d_best_model.pth"
 )
 
 
-#### 2. Inferencia con 3D U-Net
+#### 2. Inferencia y Predicción
 
+Carga del modelo entrenado y generación de segmentaciones para nuevos volúmenes:
+
+import torch
 from models.unet_3d.inference import predict_volume
 
-Carga el modelo entrenado
-model.load_state_dict(torch.load("unet3d_best_model.pth"))
+Carga del modelo pre-entrenado
+checkpoint = torch.load("checkpoints/unet3d_best_model.pth")
+model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
-Realiza la predicción sobre un volumen
-pred_mask = predict_volume(model, input_volume)
+Predicción sobre volumen de entrada
+with torch.no_grad():
+predicted_segmentation = predict_volume(
+model=model,
+input_volume=input_volume,
+device='cuda',
+batch_size=4
+)
 
 
-#### 3. Visualización de resultados
+#### 3. Análisis y Visualización de Resultados
+
+Evaluación cuantitativa y visualización comparativa de las segmentaciones predichas:
 
 from models.unet_3d.visualization import plot_segmentation_results
+from models.unet_3d.metrics import calculate_dice_score, calculate_hausdorff_distance
 
-plot_segmentation_results(input_volume, ground_truth_mask, pred_mask, slice_index=64)
+Cálculo de métricas de evaluación
+dice_scores = calculate_dice_score(predicted_segmentation, ground_truth_mask)
+hausdorff_dist = calculate_hausdorff_distance(predicted_segmentation, ground_truth_mask)
+
+Visualización comparativa multi-planar
+plot_segmentation_results(
+input_volume=input_volume,
+ground_truth=ground_truth_mask,
+prediction=predicted_segmentation,
+slice_index=64,
+save_path="results/segmentation_comparison.png"
+)
+
+print(f"Dice Score - WT: {dice_scores['wt']:.4f}, TC: {dice_scores['tc']:.4f}, ET: {dice_scores['et']:.4f}")
+
+
+#### 4. Entrenamiento de Modelos MONAI (SegResNet/UNETR)
+
+Ejemplo de entrenamiento utilizando arquitecturas avanzadas de MONAI:
+
+from models.monai_models.SegResNet_Monai.model import get_segresnet_model
+from models.monai_models.SegResNet_Monai.train import train_segresnet
+from common.config import GlobalConfig, seed_everything
+from common.dataset import BratsDataset
+
+Configuración de reproducibilidad
+seed_everything(GlobalConfig.seed)
+
+Inicialización del modelo SegResNet
+model = get_segresnet_model(
+device="cuda",
+in_channels=4,
+out_channels=3,
+dropout_prob=0.2
+)
+
+Proceso de entrenamiento con validación
+training_metrics = train_segresnet(
+model=model,
+train_loader=train_loader,
+val_loader=val_loader,
+device="cuda",
+max_epochs=300,
+learning_rate=1e-4,
+save_path="checkpoints/segresnet_model.pth"
+)
 
 ---
 
@@ -184,3 +260,4 @@ plot_segmentation_results(input_volume, ground_truth_mask, pred_mask, slice_inde
 - [Ultralytics SAM2](https://github.com/ultralytics/ultralytics)
 - [Meta SAM2](https://github.com/facebookresearch/segment-anything)
 - [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
+- [LViT: Multimodal Vision Transformer for Brain Tumor Segmentation](https://github.com/tu-berlin-mannheim/LViT)
