@@ -1,0 +1,136 @@
+Target,Modelo,Fit_ID,Parámetros,CV_Train_MAE,CV_Train_Std,CV_Val_MAE,CV_Val_Std,Val_MAE,Test_MAE,Rank
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_1,"svr__C: 37.55401188473625, svr__epsilon: 0.9517143064099162",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,1
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_2,"svr__C: 73.2993941811405, svr__epsilon: 0.5996584841970366",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,2
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_3,"svr__C: 15.701864044243651, svr__epsilon: 0.15699452033620265",0.1253,0.0011,0.3203,0.1515,0.3867,0.3632,3
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_4,"svr__C: 5.908361216819946, svr__epsilon: 0.8671761457749352",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,4
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_5,"svr__C: 60.21150117432088, svr__epsilon: 0.7090725777960455",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,5
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_6,"svr__C: 2.1584494295802448, svr__epsilon: 0.9709098521619943",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,6
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_7,"svr__C: 83.34426408004217, svr__epsilon: 0.21333911067827616",0.1490,0.0036,0.2412,0.0595,0.2485,0.2809,7
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_8,"svr__C: 18.282496720710064, svr__epsilon: 0.18440450985343382",0.1386,0.0005,0.2743,0.1006,0.3005,0.3027,8
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_9,"svr__C: 30.524224295953772, svr__epsilon: 0.5257564316322378",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,9
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_10,"svr__C: 43.294501864211576, svr__epsilon: 0.2922291401980419",0.1829,0.0108,0.2094,0.0108,0.2030,0.2515,10
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_11,"svr__C: 61.28528947223795, svr__epsilon: 0.14049386065204184",0.1165,0.0005,0.3702,0.2073,0.4364,0.4177,11
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_12,"svr__C: 29.314464853521816, svr__epsilon: 0.3673618432936917",0.2113,0.0115,0.2256,0.0238,0.2267,0.2444,12
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_13,"svr__C: 45.706998421703595, svr__epsilon: 0.7861759613930136",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,13
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_14,"svr__C: 20.067378215835976, svr__epsilon: 0.5152344384136116",0.2374,0.0356,0.2373,0.0714,0.2351,0.2742,14
+Survival_Days,SVR_linear,SVR_linear_Survival_Days_15,"svr__C: 59.34145688620425, svr__epsilon: 0.047450412719997725",0.0453,0.0000,0.7946,0.6164,1.0616,0.8074,15
+Survival_Days,Ridge,Ridge_Survival_Days_1,ridge__alpha: 37.464011884736244,0.0757,0.0147,0.2341,0.0307,0.2011,0.2340,1
+Survival_Days,Ridge,Ridge_Survival_Days_2,ridge__alpha: 95.08143064099163,0.0954,0.0115,0.2397,0.0203,0.1963,0.2232,2
+Survival_Days,Ridge,Ridge_Survival_Days_3,ridge__alpha: 73.20939418114051,0.0891,0.0124,0.2380,0.0238,0.1977,0.2254,3
+Survival_Days,Ridge,Ridge_Survival_Days_4,ridge__alpha: 59.87584841970366,0.0847,0.0131,0.2368,0.0262,0.1988,0.2275,4
+Survival_Days,Ridge,Ridge_Survival_Days_5,ridge__alpha: 15.611864044243651,0.0624,0.0175,0.2311,0.0380,0.2047,0.2463,5
+Survival_Days,Ridge,Ridge_Survival_Days_6,ridge__alpha: 15.609452033620265,0.0624,0.0175,0.2311,0.0380,0.2047,0.2463,6
+Survival_Days,Ridge,Ridge_Survival_Days_7,ridge__alpha: 5.818361216819946,0.0514,0.0193,0.2465,0.0557,0.2147,0.2626,7
+Survival_Days,Ridge,Ridge_Survival_Days_8,ridge__alpha: 86.62761457749352,0.0931,0.0118,0.2391,0.0216,0.1967,0.2240,8
+Survival_Days,Ridge,Ridge_Survival_Days_9,ridge__alpha: 60.121501174320876,0.0848,0.0130,0.2369,0.0261,0.1988,0.2275,9
+Survival_Days,Ridge,Ridge_Survival_Days_10,ridge__alpha: 70.81725777960456,0.0883,0.0125,0.2378,0.0242,0.1979,0.2257,10
+Survival_Days,Ridge,Ridge_Survival_Days_11,ridge__alpha: 2.0684494295802445,0.0410,0.0191,0.3113,0.1073,0.2689,0.3088,11
+Survival_Days,Ridge,Ridge_Survival_Days_12,ridge__alpha: 97.00098521619944,0.0959,0.0114,0.2398,0.0200,0.1962,0.2231,12
+Survival_Days,Ridge,Ridge_Survival_Days_13,ridge__alpha: 83.25426408004218,0.0921,0.0119,0.2388,0.0221,0.1969,0.2243,13
+Survival_Days,Ridge,Ridge_Survival_Days_14,ridge__alpha: 21.243911067827618,0.0666,0.0166,0.2316,0.0353,0.2040,0.2420,14
+Survival_Days,Ridge,Ridge_Survival_Days_15,ridge__alpha: 18.192496720710064,0.0644,0.0171,0.2311,0.0365,0.2045,0.2442,15
+Survival_Days,RandomForest,RandomForest_Survival_Days_1,"max_depth: 21, max_features: 0.9186171947440931, min_samples_leaf: 3, min_samples_split: 5, n_estimators: 140",0.0583,0.0115,0.1819,0.0328,0.1629,0.1696,1
+Survival_Days,RandomForest,RandomForest_Survival_Days_2,"max_depth: 19, max_features: 0.6624074561769746, min_samples_leaf: 3, min_samples_split: 5, n_estimators: 103",0.0596,0.0114,0.1841,0.0356,0.1610,0.1717,2
+Survival_Days,RandomForest,RandomForest_Survival_Days_3,"max_depth: 17, max_features: 0.608233797718321, min_samples_leaf: 2, min_samples_split: 6, n_estimators: 109",0.0574,0.0104,0.1822,0.0358,0.1588,0.1725,3
+Survival_Days,RandomForest,RandomForest_Survival_Days_4,"max_depth: 20, max_features: 0.6003115063364057, min_samples_leaf: 1, min_samples_split: 3, n_estimators: 137",0.0506,0.0088,0.1779,0.0347,0.1673,0.1760,4
+Survival_Days,RandomForest,RandomForest_Survival_Days_5,"max_depth: 20, max_features: 0.6028265220878869, min_samples_leaf: 1, min_samples_split: 3, n_estimators: 138",0.0501,0.0094,0.1784,0.0347,0.1582,0.1798,5
+Survival_Days,RandomForest,RandomForest_Survival_Days_6,"max_depth: 24, max_features: 0.6186662652854461, min_samples_leaf: 3, min_samples_split: 5, n_estimators: 134",0.0595,0.0111,0.1843,0.0344,0.1546,0.1726,6
+Survival_Days,RandomForest,RandomForest_Survival_Days_7,"max_depth: 18, max_features: 0.836965827544817, min_samples_leaf: 3, min_samples_split: 7, n_estimators: 130",0.0596,0.0118,0.1807,0.0335,0.1594,0.1723,7
+Survival_Days,RandomForest,RandomForest_Survival_Days_8,"max_depth: 21, max_features: 0.6682096494749166, min_samples_leaf: 3, min_samples_split: 4, n_estimators: 83",0.0588,0.0110,0.1845,0.0336,0.1633,0.1757,8
+Survival_Days,RandomForest,RandomForest_Survival_Days_9,"max_depth: 23, max_features: 0.9862528132298237, min_samples_leaf: 2, min_samples_split: 4, n_estimators: 88",0.0538,0.0102,0.1779,0.0337,0.1667,0.1722,9
+Survival_Days,RandomForest,RandomForest_Survival_Days_10,"max_depth: 24, max_features: 0.6390688456025535, min_samples_leaf: 3, min_samples_split: 6, n_estimators: 123",0.0593,0.0116,0.1849,0.0326,0.1620,0.1761,10
+Survival_Days,RandomForest,RandomForest_Survival_Days_11,"max_depth: 22, max_features: 0.6137554084460873, min_samples_leaf: 2, min_samples_split: 3, n_estimators: 115",0.0542,0.0100,0.1810,0.0340,0.1520,0.1757,11
+Survival_Days,RandomForest,RandomForest_Survival_Days_12,"max_depth: 16, max_features: 0.8650089137415928, min_samples_leaf: 2, min_samples_split: 4, n_estimators: 83",0.0540,0.0103,0.1794,0.0340,0.1707,0.1757,12
+Survival_Days,RandomForest,RandomForest_Survival_Days_13,"max_depth: 20, max_features: 0.6125253169822235, min_samples_leaf: 2, min_samples_split: 4, n_estimators: 123",0.0539,0.0100,0.1807,0.0341,0.1527,0.1763,13
+Survival_Days,RandomForest,RandomForest_Survival_Days_14,"max_depth: 16, max_features: 0.7580600944007257, min_samples_leaf: 2, min_samples_split: 6, n_estimators: 141",0.0562,0.0115,0.1795,0.0340,0.1682,0.1807,14
+Survival_Days,RandomForest,RandomForest_Survival_Days_15,"max_depth: 22, max_features: 0.9378135394712606, min_samples_leaf: 1, min_samples_split: 4, n_estimators: 132",0.0510,0.0098,0.1774,0.0328,0.1676,0.1740,15
+Survival_Days,RandomForest,RandomForest_Survival_Days_16,"max_depth: 22, max_features: 0.7427013306774357, min_samples_leaf: 1, min_samples_split: 3, n_estimators: 108",0.0512,0.0087,0.1776,0.0358,0.1616,0.1750,16
+Survival_Days,RandomForest,RandomForest_Survival_Days_17,"max_depth: 15, max_features: 0.6062545626964776, min_samples_leaf: 1, min_samples_split: 3, n_estimators: 87",0.0515,0.0095,0.1782,0.0394,0.1570,0.1739,17
+Survival_Days,RandomForest,RandomForest_Survival_Days_18,"max_depth: 22, max_features: 0.6056319290860338, min_samples_leaf: 3, min_samples_split: 3, n_estimators: 87",0.0598,0.0106,0.1846,0.0321,0.1660,0.1812,18
+Survival_Days,RandomForest,RandomForest_Survival_Days_19,"max_depth: 17, max_features: 0.9160702162124823, min_samples_leaf: 3, min_samples_split: 7, n_estimators: 120",0.0596,0.0115,0.1821,0.0336,0.1678,0.1759,19
+Survival_Days,RandomForest,RandomForest_Survival_Days_20,"max_depth: 21, max_features: 0.9400154311159197, min_samples_leaf: 2, min_samples_split: 3, n_estimators: 127",0.0534,0.0102,0.1797,0.0342,0.1617,0.1708,20
+Survival_Days,CatBoost,CatBoost_Survival_Days_1,"depth: 3, l2_leaf_reg: 10.965429868602328, learning_rate: 0.13668695797323277",0.0701,0.0042,0.2140,0.0339,0.1559,0.1531,1
+Survival_Days,CatBoost,CatBoost_Survival_Days_2,"depth: 4, l2_leaf_reg: 8.986584841970366, learning_rate: 0.13120372808848732",0.0572,0.0052,0.2053,0.0259,0.1518,0.1482,2
+Survival_Days,CatBoost,CatBoost_Survival_Days_3,"depth: 3, l2_leaf_reg: 3.9997491581800286, learning_rate: 0.19184977839317344",0.0618,0.0058,0.2059,0.0316,0.1643,0.1447,3
+Survival_Days,CatBoost,CatBoost_Survival_Days_4,"depth: 3, l2_leaf_reg: 9.011150117432088, learning_rate: 0.2416145155592091",0.0589,0.0038,0.2060,0.0394,0.1606,0.1642,4
+Survival_Days,CatBoost,CatBoost_Survival_Days_5,"depth: 4, l2_leaf_reg: 3.5641157902710026, learning_rate: 0.24439975445336495",0.0450,0.0035,0.1989,0.0172,0.1638,0.1504,5
+Survival_Days,CatBoost,CatBoost_Survival_Days_6,"depth: 4, l2_leaf_reg: 5.123391106782762, learning_rate: 0.13636499344142014",0.0547,0.0023,0.2055,0.0285,0.1575,0.1493,6
+Survival_Days,CatBoost,CatBoost_Survival_Days_7,"depth: 3, l2_leaf_reg: 9.174815096277165, learning_rate: 0.2223306320976562",0.0594,0.0046,0.2144,0.0310,0.1613,0.1618,7
+Survival_Days,CatBoost,CatBoost_Survival_Days_8,"depth: 3, l2_leaf_reg: 7.319450186421157, learning_rate: 0.1582458280396084",0.0673,0.0058,0.2086,0.0363,0.1530,0.1492,8
+Survival_Days,CatBoost,CatBoost_Survival_Days_9,"depth: 3, l2_leaf_reg: 6.998609717152554, learning_rate: 0.1093331326427231",0.0742,0.0056,0.2112,0.0393,0.1470,0.1571,9
+Survival_Days,CatBoost,CatBoost_Survival_Days_10,"depth: 4, l2_leaf_reg: 6.663618432936917, learning_rate: 0.1912139968434072",0.0481,0.0031,0.2069,0.0294,0.1579,0.1627,10
+Survival_Days,CatBoost,CatBoost_Survival_Days_11,"depth: 3, l2_leaf_reg: 9.183860093330873, learning_rate: 0.17649239825343255",0.0659,0.0045,0.2115,0.0387,0.1563,0.1493,11
+Survival_Days,CatBoost,CatBoost_Survival_Days_12,"depth: 4, l2_leaf_reg: 8.924145688620424, learning_rate: 0.10929008254399955",0.0619,0.0018,0.2054,0.0304,0.1478,0.1363,12
+Survival_Days,CatBoost,CatBoost_Survival_Days_13,"depth: 3, l2_leaf_reg: 9.803075385877797, learning_rate: 0.19009985039390861",0.0636,0.0039,0.2077,0.0369,0.1500,0.1615,13
+Survival_Days,CatBoost,CatBoost_Survival_Days_14,"depth: 4, l2_leaf_reg: 12.488855372533333, learning_rate: 0.29312640661491185",0.0417,0.0026,0.2086,0.0113,0.1630,0.1642,14
+Survival_Days,CatBoost,CatBoost_Survival_Days_15,"depth: 4, l2_leaf_reg: 6.854165025399161, learning_rate: 0.10319325044404284",0.0625,0.0010,0.2115,0.0364,0.1605,0.1479,15
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_1,"svr__C: 2.1236203565420873, svr__epsilon: 0.024014286128198326, svr__gamma: 0.0015639878836228103",0.0356,0.0066,0.1431,0.0253,0.1280,0.1764,1
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_2,"svr__C: 2.79597545259111, svr__epsilon: 0.00812037280884873, svr__gamma: 0.0004119890406724053",0.0494,0.0163,0.1638,0.0148,0.1471,0.1701,2
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_3,"svr__C: 1.1742508365045983, svr__epsilon: 0.022323522915498707, svr__gamma: 0.0013022300234864176",0.0470,0.0114,0.1534,0.0187,0.1169,0.1693,3
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_4,"svr__C: 3.1242177333881367, svr__epsilon: 0.005411689885916049, svr__gamma: 0.0020398197043239885",0.0100,0.0024,0.1368,0.0310,0.1445,0.1900,4
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_5,"svr__C: 3.497327922401265, svr__epsilon: 0.009246782213565523, svr__gamma: 0.00046364993441420124",0.0448,0.0152,0.1613,0.0121,0.1463,0.1745,5
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_6,"svr__C: 1.5502135295603015, svr__epsilon: 0.011084844859190755, svr__gamma: 0.0011495128632644758",0.0380,0.0122,0.1535,0.0169,0.1223,0.1741,6
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_7,"svr__C: 2.2958350559263474, svr__epsilon: 0.010824582803960838, svr__gamma: 0.001323705789444759",0.0284,0.0088,0.1461,0.0217,0.1309,0.1794,7
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_8,"svr__C: 1.4184815819561254, svr__epsilon: 0.010842892970704364, svr__gamma: 0.0008327236865873835",0.0465,0.0145,0.1596,0.0161,0.1290,0.1714,8
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_9,"svr__C: 2.3682099526511076, svr__epsilon: 0.020703519227860272, svr__gamma: 0.0004993475643167195",0.0554,0.0146,0.1622,0.0148,0.1372,0.1725,9
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_10,"svr__C: 2.5427033152408347, svr__epsilon: 0.01684829137724085, svr__gamma: 0.00019290082543999546",0.0717,0.0133,0.1899,0.0192,0.1545,0.1719,10
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_11,"svr__C: 2.8226345557043153, svr__epsilon: 0.008410482473745831, svr__gamma: 0.00023010318597055905",0.0607,0.0161,0.1789,0.0169,0.1545,0.1690,11
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_12,"svr__C: 3.84665661176, svr__epsilon: 0.024312640661491188, svr__gamma: 0.0017167946962329224",0.0273,0.0024,0.1340,0.0319,0.1404,0.1890,12
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_13,"svr__C: 1.9138413075201122, svr__epsilon: 0.006953442280127677, svr__gamma: 0.0014684660530243138",0.0256,0.0090,0.1466,0.0222,0.1276,0.1794,13
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_14,"svr__C: 2.3204574812188037, svr__epsilon: 0.007440764696895577, svr__gamma: 0.0010903538202225403",0.0303,0.0110,0.1507,0.0176,0.1298,0.1799,14
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_15,"svr__C: 1.1031655633456552, svr__epsilon: 0.023186408041575644, svr__gamma: 0.0006175599632000339",0.0628,0.0146,0.1654,0.0203,0.1321,0.1669,15
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_16,"svr__C: 2.9875668530619457, svr__epsilon: 0.01123422152178822, svr__gamma: 0.0011401360423556218",0.0284,0.0089,0.1464,0.0201,0.1352,0.1804,16
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_17,"svr__C: 2.640130838029839, svr__epsilon: 0.008697089110510542, svr__gamma: 0.002039169255529117",0.0147,0.0030,0.1390,0.0294,0.1387,0.1851,17
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_18,"svr__C: 3.3253984700833437, svr__epsilon: 0.023789978831283785, svr__gamma: 0.0018896547008552978",0.0269,0.0022,0.1349,0.0321,0.1397,0.1866,18
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_19,"svr__C: 2.7936999364332555, svr__epsilon: 0.02343748470046234, svr__gamma: 0.000276985004103839",0.0650,0.0146,0.1735,0.0168,0.1479,0.1762,19
+Survival_Days,SVR_RBF,SVR_RBF_Survival_Days_20,"svr__C: 1.5879485872574355, svr__epsilon: 0.005904545778210761, svr__gamma: 0.0007506606615265288",0.0440,0.0154,0.1602,0.0156,0.1324,0.1708,20
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_1,"l2_regularization: 0.0749080237694725, learning_rate: 0.19260714596148742, max_depth: 10, max_iter: 270, min_samples_leaf: 21",0.0333,0.0044,0.1812,0.0102,0.1858,0.1850,1
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_2,"l2_regularization: 0.08916655057071823, learning_rate: 0.06499623737270044, max_depth: 10, max_iter: 366, min_samples_leaf: 18",0.0322,0.0059,0.1703,0.0253,0.1909,0.1935,2
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_3,"l2_regularization: 0.028573363584388157, learning_rate: 0.14763327094232792, max_depth: 7, max_iter: 251, min_samples_leaf: 26",0.0386,0.0119,0.1854,0.0044,0.1768,0.2051,3
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_4,"l2_regularization: 0.18771054180315005, learning_rate: 0.05011681487615215, max_depth: 7, max_iter: 307, min_samples_leaf: 26",0.0474,0.0066,0.1827,0.0098,0.1772,0.1843,4
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_5,"l2_regularization: 0.0046124850082831514, learning_rate: 0.12871619903875836, max_depth: 5, max_iter: 357, min_samples_leaf: 34",0.0556,0.0120,0.1848,0.0038,0.1657,0.1745,5
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_6,"l2_regularization: 0.1184829137724085, learning_rate: 0.05696756190799966, max_depth: 5, max_iter: 384, min_samples_leaf: 23",0.0458,0.0182,0.1795,0.0140,0.1844,0.1891,6
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_7,"l2_regularization: 0.013010318597055905, learning_rate: 0.192332830588, max_depth: 4, max_iter: 258, min_samples_leaf: 16",0.0384,0.0106,0.1811,0.0060,0.2023,0.1999,7
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_8,"l2_regularization: 0.1368466053024314, learning_rate: 0.1160228740609402, max_depth: 9, max_iter: 257, min_samples_leaf: 29",0.0436,0.0053,0.1831,0.0137,0.1687,0.1977,8
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_9,"l2_regularization: 0.034672930701554416, learning_rate: 0.10865909113598612, max_depth: 4, max_iter: 353, min_samples_leaf: 18",0.0458,0.0139,0.1833,0.0108,0.1972,0.1773,9
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_10,"l2_regularization: 0.06234221521788219, learning_rate: 0.1280102031766716, max_depth: 6, max_iter: 303, min_samples_leaf: 32",0.0388,0.0127,0.1809,0.0074,0.1813,0.1849,10
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_11,"l2_regularization: 0.15502656467222292, learning_rate: 0.19092484123462838, max_depth: 6, max_iter: 263, min_samples_leaf: 30",0.0374,0.0096,0.1814,0.0108,0.1682,0.2036,11
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_12,"l2_regularization: 0.06530815376116708, learning_rate: 0.1355665961608099, max_depth: 11, max_iter: 289, min_samples_leaf: 30",0.0460,0.0095,0.1865,0.0049,0.1624,0.2045,12
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_13,"l2_regularization: 0.1494640220274762, learning_rate: 0.13095381985836196, max_depth: 10, max_iter: 373, min_samples_leaf: 27",0.0332,0.0043,0.1781,0.0081,0.1801,0.1975,13
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_14,"l2_regularization: 0.02818484499495253, learning_rate: 0.17032954711310594, max_depth: 3, max_iter: 338, min_samples_leaf: 21",0.0472,0.0188,0.1863,0.0055,0.1930,0.1906,14
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_15,"l2_regularization: 0.08468029614127393, learning_rate: 0.10923222772633545, max_depth: 10, max_iter: 312, min_samples_leaf: 25",0.0427,0.0093,0.1812,0.0124,0.1830,0.1904,15
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_16,"l2_regularization: 0.039768480817761034, learning_rate: 0.1567012929122975, max_depth: 5, max_iter: 282, min_samples_leaf: 19",0.0358,0.0149,0.1767,0.0106,0.1957,0.1995,16
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_17,"l2_regularization: 0.1852601757026698, learning_rate: 0.14766155382529167, max_depth: 9, max_iter: 321, min_samples_leaf: 26",0.0441,0.0116,0.1810,0.0142,0.1687,0.1832,17
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_18,"l2_regularization: 0.06617960497052984, learning_rate: 0.05953375254290355, max_depth: 9, max_iter: 311, min_samples_leaf: 19",0.0343,0.0085,0.1712,0.0194,0.1858,0.1972,18
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_19,"l2_regularization: 0.1459212356676128, learning_rate: 0.14563362070328195, max_depth: 5, max_iter: 350, min_samples_leaf: 29",0.0389,0.0035,0.1855,0.0094,0.1801,0.1852,19
+Survival_Days,HistGradientBoosting,HistGradientBoosting_Survival_Days_20,"l2_regularization: 0.14264895744459902, learning_rate: 0.1641177572925346, max_depth: 9, max_iter: 391, min_samples_leaf: 21",0.0315,0.0059,0.1742,0.0201,0.1825,0.1683,20
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_1,ridge__alpha: 37.55401188473625,0.0009,0.0004,0.1965,0.0101,0.2740,0.2907,1
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_2,ridge__alpha: 95.17143064099162,0.0023,0.0011,0.1935,0.0105,0.2720,0.2855,2
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_3,ridge__alpha: 73.2993941811405,0.0018,0.0009,0.1946,0.0103,0.2727,0.2874,3
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_4,ridge__alpha: 59.96584841970366,0.0015,0.0007,0.1953,0.0102,0.2732,0.2886,4
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_5,ridge__alpha: 15.701864044243651,0.0004,0.0002,0.1979,0.0099,0.2749,0.2928,5
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_6,ridge__alpha: 15.699452033620265,0.0004,0.0002,0.1979,0.0099,0.2749,0.2928,6
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_7,ridge__alpha: 5.908361216819946,0.0002,0.0001,0.1985,0.0099,0.2752,0.2938,7
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_8,ridge__alpha: 86.7176145774935,0.0021,0.0010,0.1939,0.0104,0.2723,0.2863,8
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_9,ridge__alpha: 60.21150117432088,0.0015,0.0007,0.1953,0.0102,0.2732,0.2886,9
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_10,ridge__alpha: 70.90725777960455,0.0017,0.0008,0.1947,0.0103,0.2728,0.2876,10
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_11,ridge__alpha: 2.1584494295802448,0.0001,0.0000,0.1988,0.0099,0.2754,0.2941,11
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_12,ridge__alpha: 97.09098521619943,0.0023,0.0011,0.1934,0.0106,0.2719,0.2854,12
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_13,ridge__alpha: 83.34426408004217,0.0020,0.0010,0.1941,0.0104,0.2724,0.2865,13
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_14,ridge__alpha: 21.333911067827618,0.0005,0.0003,0.1975,0.0100,0.2746,0.2922,14
+Survival_Days,Ridge_Polynomial,Ridge_Polynomial_Survival_Days_15,ridge__alpha: 18.282496720710064,0.0005,0.0002,0.1977,0.0100,0.2748,0.2925,15
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_1,"mlpregressor__alpha: 0.037554011884736255, mlpregressor__learning_rate_init: 0.09607143064099162",5.3137,7.2640,4.4640,5.9640,0.2351,0.3256,1
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_2,"mlpregressor__alpha: 0.07329939418114051, mlpregressor__learning_rate_init: 0.06086584841970366",3.3411,2.2728,2.8372,1.8573,0.2776,0.3183,2
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_3,"mlpregressor__alpha: 0.015701864044243653, mlpregressor__learning_rate_init: 0.016599452033620267",0.2381,0.0389,0.3118,0.0197,0.3099,0.2744,3
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_4,"mlpregressor__alpha: 0.0059083612168199465, mlpregressor__learning_rate_init: 0.08761761457749352",3.5736,4.5452,3.9222,4.9158,0.2973,0.2860,4
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_5,"mlpregressor__alpha: 0.060211501174320885, mlpregressor__learning_rate_init: 0.07180725777960455",2.0386,2.2346,1.9967,2.0755,0.2354,0.2765,5
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_6,"mlpregressor__alpha: 0.0021584494295802444, mlpregressor__learning_rate_init: 0.09799098521619944",9.7423,6.0464,9.2421,5.9618,0.3032,0.3332,6
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_7,"mlpregressor__alpha: 0.08334426408004218, mlpregressor__learning_rate_init: 0.022233911067827617",0.1225,0.0269,0.2343,0.0206,0.2415,0.2652,7
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_8,"mlpregressor__alpha: 0.018282496720710063, mlpregressor__learning_rate_init: 0.019340450985343382",0.2022,0.0709,0.3021,0.0378,0.2837,0.2216,8
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_9,"mlpregressor__alpha: 0.030524224295953774, mlpregressor__learning_rate_init: 0.053475643163223785",1.0734,1.1744,1.2427,1.2792,0.3004,0.3232,9
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_10,"mlpregressor__alpha: 0.04329450186421158, mlpregressor__learning_rate_init: 0.030122914019804194",0.1909,0.0534,0.2969,0.0571,0.2381,0.2856,10
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_11,"mlpregressor__alpha: 0.06128528947223795, mlpregressor__learning_rate_init: 0.014949386065204184",0.1405,0.0213,0.2627,0.0478,0.2943,0.2564,11
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_12,"mlpregressor__alpha: 0.029314464853521818, mlpregressor__learning_rate_init: 0.037636184329369174",0.1660,0.0175,0.2743,0.0392,0.3032,0.3272,12
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_13,"mlpregressor__alpha: 0.0457069984217036, mlpregressor__learning_rate_init: 0.07951759613930137",3.4625,4.3901,4.7074,5.9497,0.3059,0.3491,13
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_14,"mlpregressor__alpha: 0.020067378215835974, mlpregressor__learning_rate_init: 0.05242344384136116",1.2810,1.5505,1.1833,1.2718,0.2568,0.3328,14
+Survival_Days,MLPRegressor,MLPRegressor_Survival_Days_15,"mlpregressor__alpha: 0.05934145688620425, mlpregressor__learning_rate_init: 0.0056450412719997725",0.4341,0.2421,0.4937,0.1637,0.4807,0.3252,15
